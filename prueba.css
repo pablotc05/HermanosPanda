@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    overflow-x: hidden; /* Evita el desplazamiento horizontal */
+    box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+}
+
+main {
+    flex-grow: 1;
+}
+
+header {
+    background-color: #44ddff;
+    color: white;
+    padding: 2rem;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.apartados {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0;
+    max-width: 100%; /* Asegura que no exceda el ancho de la pantalla */
+}
+
+.apartado {
+    width: 20rem;
+    margin-bottom: 1rem;
+    max-width: 100%; /* Asegura que no exceda el ancho de la pantalla */
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.galeria {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+    max-width: 100%; /* Asegura que no exceda el ancho de la pantalla */
+   
+}
+
+.imagen-container {
+    width: 20rem; /* Ajusta el ancho para que coincida con los demás elementos */
+    height: 20rem; /* Ajusta la altura para que coincida con los demás elementos */
+    overflow: hidden;
+    border-radius: 1rem;
+    position: relative;
+    transition: transform 0.4s ease;
+    max-width: 100%; /* Asegura que no exceda el ancho de la pantalla */
+    margin: auto;
+}
+
+img {
+    width: 250px; /* Ajusta el ancho de la imagen para que ocupe todo el contenedor */
+    height: 250px; /* Ajusta la altura de la imagen para que ocupe todo el contenedor */
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.imagen-container:hover {
+    transform: scale(1.1);
+}
+
+.button-container {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.boton {
+    display: inline-block;
+    padding: 8px 6px;
+    background-color: #44ddff;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.boton:hover {
+    background-color: #535353;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 3px;
+    
+    margin-top: 10px;
+}
+
+body::-webkit-scrollbar {
+    width: 1px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #44ddff;
+    border-radius: 0.5rem;
+}
+
+.fondo {
+    width: 250px;
+    height: 250px;
+    text-align: center;
+    display: flex;
+    margin: 0 auto;
+    max-width: 80%; /* Asegura que no exceda el ancho de la pantalla */
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .apartado, .imagen-container {
+        width: 80%; /* Asegura que los elementos se ajusten al ancho de la pantalla */
+    }
+
+    .boton {
+        width: 80%; /* Ajusta el ancho del botón en dispositivos móviles */
+    }
+}
